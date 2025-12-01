@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Color Scheme Generator</title>
-</head>
-<body>
-  
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body>
+    <header>
+      <form>
+        <input type="color" class="color-picker" />
+        <select name="color-template" id="color-template">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome">Monochrome-dark</option>
+          <option value="monochrome">Monochrome-light</option>
+          <option value="monochrome">Analogic</option>
+          <option value="monochrome">Complement</option>
+          <option value="monochrome">Analogic-complement</option>
+          <option value="monochrome">Triad</option>
+        </select>
+        <button type="submit" class="get-color">Get color scheme</button>
+      </form>
+    </header>
+    <main class="color-container">
+      <section class="color color-1"></section>
+      <section class="color color-2"></section>
+      <section class="color color-3"></section>
+      <section class="color color-4"></section>
+      <section class="color color-5"></section>
+    </main>
+    <div class="hex">
+      <p>#f55a5a</p>
+      <p>#2b283a</p>
+      <p>#fbf3ab</p>
+      <p>#aad1b6</p>
+      <p>#a626d3</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,4 +1,76 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.75em 1.25em;
+    gap: 1em;
+}
+
+select {
+    flex: 7;
+    font-family: inherit;
+    padding: .5em;
+}
+
+.color-picker {
+    padding: 0;
+    border: none;
+    width: 3.2em;
+    height: 2.12em;
+}
+
+button {
+    flex: 3.25;
+    font-family: inherit;
+    border: 1px solid gray;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (min-width: 800px) {
+    .get-color {
+        margin-left: 2em;
+    }
+}
+
+main {
+    display: flex;
+}
+
+.color {
+    width: 20vw;
+    height: 49em;
+}
+
+.color-1 {
+    background-color: #f55a5a;
+}
+
+.color-2 {
+    background-color: #2b283a;
+}
+.color-3 {
+    background-color: #fbf3ab;
+}
+.color-4 {
+    background-color: #aad1b6;
+}
+.color-5 {
+    background-color: #a626d3;
+}
+
+.hex {
+    display: flex;
+    justify-content: space-around;
+}
+
+p {
+    font-size: .75rem;
+    font-weight: 500;
 }
