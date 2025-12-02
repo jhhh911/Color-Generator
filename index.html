@@ -15,17 +15,20 @@
   <body>
     <header>
       <form>
-        <input type="color" class="color-picker" />
-        <select name="color-template" id="color-template">
+        <input type="color" class="color-picker" id="color-picker" value="#ffffff"/>
+        <select name="color-template" id="color-mode">
+          <option value="">Choose a color</option>
           <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome-dark</option>
-          <option value="monochrome">Monochrome-light</option>
-          <option value="monochrome">Analogic</option>
-          <option value="monochrome">Complement</option>
-          <option value="monochrome">Analogic-complement</option>
-          <option value="monochrome">Triad</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <!-- Pick up from here -->
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
         </select>
-        <button type="submit" class="get-color">Get color scheme</button>
+        <button type="button" class="get-color" id="color-btn">Get color scheme</button>
       </form>
     </header>
     <main class="color-container">
@@ -35,13 +38,7 @@
       <section class="color color-4"></section>
       <section class="color color-5"></section>
     </main>
-    <div class="hex">
-      <p>#f55a5a</p>
-      <p>#2b283a</p>
-      <p>#fbf3ab</p>
-      <p>#aad1b6</p>
-      <p>#a626d3</p>
-    </div>
+    <div class="hex" id="hex"></div>
     <script src="script.js"></script>
   </body>
 </html>
