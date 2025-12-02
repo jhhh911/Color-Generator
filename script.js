@@ -1,16 +1,13 @@
-// API: https://www.thecolorapi.com/docs#schemes
-
 let colorArray = [];
 const seed = document.getElementById("color-picker");
 let seedValue = "";
-let seedMode = document.getElementById("color-mode");
+const seedMode = document.getElementById("color-mode");
 let seedModeValue = "";
 const button = document.getElementById("color-btn");
-let hexValue = document.getElementById("hex")
+const hexValue = document.getElementById("hex");
 
-seed.addEventListener("input", selectColor);
-
-seedMode.addEventListener("input", selectMode);
+seed.addEventListener("input", handleInput);
+seedMode.addEventListener("input", handleInput);
 
 button.addEventListener("click", function (event) {
   event.preventDefault();
@@ -34,20 +31,23 @@ function generateColor() {
     });
 }
 
-function selectColor() {
-  seedValue = this.value.slice(1);
-  generateColor();
-}
-
-function selectMode() {
+function handleInput() {
+  seedValue = seed.value.slice(1);
   seedModeValue = seedMode.value;
   generateColor();
 }
 
 function generateColorHex() {
-  hexValue.innerHTML = '';
+  hexValue.innerHTML = "";
   for (let i = 0; i < 5; i++) {
-    let html = `<p>${colorArray[i]}</p>`;
-    hexValue.innerHTML += html;
+    hexValue.innerHTML += `<p class='textbox'>${colorArray[i]}</p>`;
   }
+  
+  document.querySelectorAll('.textbox').forEach(box => {
+    box.addEventListener('click', () => {
+      navigator.clipboard.writeText(box.innerText);
+    alert("hex color copied to clipboard");
+    })
+  })
+
 }
